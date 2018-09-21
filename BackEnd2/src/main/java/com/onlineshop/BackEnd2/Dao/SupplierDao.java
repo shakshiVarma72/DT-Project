@@ -6,8 +6,7 @@ import com.onlineshop.BackEnd2.dto.Supplier;
 
 public interface SupplierDao {
 
-	
-	public boolean addSupplier(Supplier supplier);
+     public boolean addSupplier(Supplier supplier);
 	 public boolean deleteSupplier(int supplierId);
 	 public boolean updateSupplier(Supplier supplier);
 	public  Supplier  getSupplierById(int sipplierId);

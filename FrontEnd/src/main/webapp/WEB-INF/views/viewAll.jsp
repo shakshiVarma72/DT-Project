@@ -1,19 +1,20 @@
- <jsp:include page="./shared/navbar.jsp"></jsp:include>
- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-  
-  <spring:url var="images" value="/resources/images"/>
-  <c:set var="contextRoot" value="${pageContext.request.contextPath }"/>
-   
- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- 
+
+<jsp:include page="./shared/navbar.jsp"></jsp:include>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<spring:url var="images" value="/resources/images" />
+<c:set var="contextRoot" value="${pageContext.request.contextPath }" />
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <div class="container">
-<h2 style="color:red">${msg }</h2>
-<h2>List Of Product</h2>
-<!-- <hr>
+	<h2 style="color: red">${msg }</h2>
+	<h2>List Of Product</h2>
+	<!-- <hr>
 <div class="thumbnail">
 <div class="table-responsive">
 <table class="table table-hover">
@@ -55,22 +56,31 @@
 </div>
 </table> -->
 
-	 <c:forEach items="${productlist}" var="pObj"> 
-        <div class="col-md-4">
-      	<div class="thumbnail">
-       <a href="productpage" target="_blank"> 
-          <img src="${images}/${pObj.imgName}" alt="Lights" class="img-responsive" style="width:100px; height:150px;">
-          <div class="caption">
-            <p>Product Name:${pObj.productName}</p>
-            <p>Description:${pObj.productDesc}</p>
-            <p>Price:${pObj.price}</p>
-            <p>Quantity:${pObj.quantity}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-		</c:forEach>
-    
+	<c:forEach items="${productList}" var="pObj">
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<a href="productpage" target="_blank"> </a> <img
+					src="${images}/${pObj.imgName}" alt="Lights" class="img-responsive"
+					style="width: 100px; height: 150px;">
+				<div class="caption">
+					<p>Product Name:${pObj.productName}</p>
+					<p>Description:${pObj.productDesc}</p>
+					<p>Price:${pObj.price}</p>
+					<p>Quantity:${pObj.quantity}</p>
+					<tr>
+						<td><a href="deleteProduct/${pObj.productId}">
+								<span class="glyphicon glyphicon-trash"></span>
+						</a></td>
+						<a href="${contextRoot}/addToCart/${pObj.productId}"
+							 class="btn btn-warning"><i class="fa fa-shopping-cart"></i>
+							Add Cart</a>
+				</div>
+				</tr>
+
+			</div>
+		</div>
+	</c:forEach>
+
 </div>
 </body>
 

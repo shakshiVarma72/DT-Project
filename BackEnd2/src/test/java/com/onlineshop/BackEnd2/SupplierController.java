@@ -24,35 +24,33 @@ static SupplierDao supplierDao;
 		 supplierDao =context.getBean("supplierDao",SupplierDao.class);
 	}
 	@Test
+	@Ignore
 public void addSuppliertest() {
 		/*Supplier supplier=new Supplier(); 
 		supplier.setSupplierName("Fashion Textile");
-		supplier.setAddress("Surat");
-		assertTrue("sucessfull adding supplier",supplierDao.addSupplier(supplier));
+		supplier.setSupplierAddress("Surat");
+		assertTrue("problem in adding supplier",supplierDao.addSupplier(supplier));
 		}*/
 	
 	/*Supplier supplier1=new Supplier(); 
 	supplier1.setSupplierName("kids Care Products  ");
-	supplier1.setAddress("Delhi");
+	supplier1.setSupplierAddress("Delhi");
 	assertTrue("sucessfull adding supplier",supplierDao.addSupplier(supplier1));
 	}*/
 		
 	Supplier supplier2=new Supplier(); 
 	supplier2.setSupplierName("India Designs Exports pvt.Ltd ");
-	supplier2.setAddress("Banglore");
+	supplier2.setSupplierAddress("Banglore");
 	assertTrue("Problem in adding Supplier",supplierDao.addSupplier(supplier2));
 	}
 	
 	@Test
-	@Ignore 
-	
-	
 	public void SupplierList(){
 		List<Supplier> supplier=supplierDao.listSupplier();
 		System.out.println(supplier.size());
 		System.out.println("I AM LIST");
 		for(Supplier list:supplier) {
-			System.out.println(list.getSupplierName()+""   +list.getAddress());
+			System.out.println(list.getSupplierName()+""   +list.getSupplierAddress());
 			
 		}
 		}

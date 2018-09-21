@@ -28,7 +28,7 @@
 
 
 					<td><a
-						href="${contextRoot}/deleteSupplier/${supplierObj.supplierId}">
+						href="${contextRoot}/admin/deleteSupplier/${supplierObj.supplierId}">
 							<span class="glyphicon glyphicon-trash"></span>
 					</a></td>
 					<td>

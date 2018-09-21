@@ -1,46 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-		
-				     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-		     <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-		
-		<spring:url  var="images" value="/resources/images"/>
-		<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
-		
-		<div class="container">
-		<h2>List Of Category</h2>
-		<hr>
-		<div class="thumbnail">
-		<div class="tabl e-responsive">
-		<table class="table table-hover">
-		    <thead>
-		      <tr>
-		      	<th>Category name</th>
-		        <th colspan="2">Action</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		    
-		    
-		     <c:forEach items="${categoryList}" var="categoryObj">
-		    <tr>
-		    <td>${categoryObj.categoryName}</td>
-			<td>
-				<a href="${contextRoot}/deleteCategory/${categoryObj.categoryId}">
-          		<span class="glyphicon glyphicon-trash"></span></a>
-          	</td>
-          	<td>
-				<a href="${contextRoot}/fetchCategory/${categoryObj.categoryId}">
-          		<span class="glyphicon glyphicon-edit"></span></a>
-          	</td>
-			</tr>
-		</c:forEach>
-		</tbody>
-		</table>
-		</div>
-		</div>
-	    </div>
-		
-		
-		</body>
-		</html>
+<!-- navbar -->
+<!-- jsp include will include the contents at runtime...will not copy like include directive -->
+ <jsp:include page="./shared/navbar.jsp"></jsp:include>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="springs" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
+<div class="container">
+
+<div style="color:red">${msg}</div>
+<br/>
+	<h1>Add Category</h1>
+	<springs:form action="${contextRoot}/admin/addCategory" method="post" modelAttribute="categoryObj">
+  	
+  	<div class="form-group">
+    <label for="categoryName">Category Name:</label>
+    <springs:input type="text" class="form-control" path="categoryName"/>
+  	</div> 
+    
+    <div class="form-group">
+    <label for="category Desc">Category Desc:</label>
+    <springs:input type="text" class="form-control" path="categoryDesc"/>
+  	</div> 
+    
+   <button type="submit" class="btn btn-default">Add Category</button>
+</springs:form>
+</div>
+
+
+<div style="margin-top: 100px">
+<jsp:include page="./shared/footer.jsp"></jsp:include>
+</div>

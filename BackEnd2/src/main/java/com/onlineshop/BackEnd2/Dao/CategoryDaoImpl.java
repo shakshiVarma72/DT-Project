@@ -31,12 +31,13 @@ public class CategoryDaoImpl implements CategoryDao{
 		catch(Exception e)
 		{  
 			e.printStackTrace();
-			return false;}
+			return false;
+		}
 			
 		}
 	
 
-	public boolean deleteCategory(Category Category) {
+	public boolean deleteCategory(int Category) {
 		try {
 			sessionFactory.getCurrentSession().delete(Category);
 					return true ;

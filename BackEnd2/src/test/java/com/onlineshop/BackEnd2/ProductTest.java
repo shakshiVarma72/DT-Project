@@ -64,7 +64,7 @@ import org.junit.BeforeClass;
 	@Test
 	@Ignore
 	public void updateProduct() {
-		Product pro=productdao.getProduct(1);
+		Product pro=productdao.getProductById(1);
 		
 		pro.setProductName("abcd");
 		//pro.setProductDesc("xyz");
@@ -81,7 +81,7 @@ import org.junit.BeforeClass;
 	public void deleteProductById() {
 		
 		productdao.deleteProduct(1);
-		Product product=productdao.getProduct(1);
+		Product product=productdao.getProductById(1);
 		assertNull("Product deleted ",product);
 		
 		

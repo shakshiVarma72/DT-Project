@@ -12,29 +12,19 @@ import com.onlineshop.BackEnd2.dto.Address;
 import com.onlineshop.BackEnd2.dto.User;
 
 
-@Repository
+@Repository("userDao")
 @Transactional
 public class UserDaoImpl implements UserDao {
-
-	
-	
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	
-
-
 	public User getUserByEmail(String email) {
 		Session session=sessionFactory.getCurrentSession();
-		User bymail=(User)session.get(User.class, email );
+		User bymail=(User)session.get(User.class, email);
+		System.out.println("User Object = "+bymail);
 		return bymail;
 	}
 
-	public User getUserById(int Id) {
-		Session session=sessionFactory.getCurrentSession();
-		User byid=(User)session.get(User.class, Id);
-         return byid;
-	}
 
 	public Boolean addUser(User user) {
 		try {
@@ -76,9 +66,36 @@ public class UserDaoImpl implements UserDao {
 		return false;
 	}
 
+	
+
+	
+
 	public List<Address> getAllAddress(int UserId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-}
+	public boolean registerUser(User user) {
+		try
+		{
+			System.out.println(user.getEmail());
+			Session session=sessionFactory.getCurrentSession();
+			session.save(user);
+			return true;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	
+	}
+
+	
+
+
+	
+	
+
+

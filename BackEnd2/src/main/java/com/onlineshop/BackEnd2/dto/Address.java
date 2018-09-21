@@ -28,7 +28,7 @@ public class Address {
 	private boolean isBilling;
 
 	@ManyToOne(fetch= FetchType.LAZY)	
-	@JoinColumn(name="U_Id")
+	@JoinColumn(name="email")
 	private User user;
 	
 	

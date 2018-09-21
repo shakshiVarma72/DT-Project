@@ -21,6 +21,7 @@ public boolean addSupplier(Supplier supplier) {
 		try {
 			Session session=sessionFactory.getCurrentSession();
 				session.save(supplier);
+				 
 					return true;
 				}
 				catch(Exception e) 
@@ -68,8 +69,5 @@ public boolean addSupplier(Supplier supplier) {
 		@SuppressWarnings("unchecked")
 		List<Supplier> supplier=c.list();
 		return supplier;	}
-
-	
-	
 
 }

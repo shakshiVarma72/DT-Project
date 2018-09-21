@@ -47,11 +47,11 @@ public class AppTest1 {
 	
 		
 		User user=new User();
-		user.setFirstname("sakshi");
-		user.setLastname("verma");
-		user.setContactNo(789825521l);
+	//	user.setFirstname("sakshi");
+		//user.setLastname("verma");
+		//user.setContactNo(789825521l);
 		user.setPassword("Sakshi");
-		user.setConfirmpassword("sakshi");
+		//user.setConfirmpassword("sakshi");
 		user.setEmail("sakshi7198@gmail.com");
 		user.setRole("User");
 		user.setEnabled(true);
@@ -73,10 +73,10 @@ public class AppTest1 {
 public void getUserByIdTest() {
 	
 	
-	User user= daoObj.getUserById(1);
+	//User user= daoObj.getUserById();
 	
-	System.out.println(user.getFirstname()+"" +user.getLastname());
-	assertNull("User Not Found",user);
+	//System.out.println(user.getFirstname()+"" +user.getLastname());
+	//assertNull("User Not Found",user);
 		
 }
 

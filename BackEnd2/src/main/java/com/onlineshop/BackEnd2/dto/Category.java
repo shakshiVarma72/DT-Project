@@ -3,10 +3,12 @@ package com.onlineshop.BackEnd2.dto;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -17,14 +19,14 @@ public class Category {
 
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	/*@Column(name="C_Id")*/
 	private int categoryId;
 	
-private String CategoryName;
-private  String CategoryDesc;
+private String categoryName;
+private  String categoryDesc;
 
-@OneToMany(fetch=FetchType.LAZY,mappedBy="category")
+@OneToMany(fetch=FetchType.EAGER,mappedBy="category",cascade=CascadeType.ALL)
 private Set<Product> product=new HashSet<Product>();
 
 public Set<Product> getProduct() {
@@ -34,16 +36,16 @@ public void setProduct(Set<Product> product) {
 	this.product = product;
 }
 public String getCategoryName() {
-	return CategoryName;
+	return categoryName;
 }
 public void setCategoryName(String categoryName) {
-	CategoryName = categoryName;
+	this.categoryName = categoryName;
 }
 public String getCategoryDesc() {
-	return CategoryDesc;
+	return categoryDesc;
 }
 public void setCategoryDesc(String categoryDesc) {
-	CategoryDesc = categoryDesc;
+	this.categoryDesc = categoryDesc;
 }
 public int getCategoryId() {
 	return categoryId;

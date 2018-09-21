@@ -1,4 +1,4 @@
-package com.onlineshop.BackEnd2.dto;
+ package com.onlineshop.BackEnd2.dto;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,63 +11,51 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity 
 @Table(name="User_Tab")
 public class User {
 	
 	@Id
-	@GeneratedValue
-	@Column(name="U_Id")
-	private int userID;
-	private String firstname ;
-	private String lastname ;
+	@NotEmpty(message="Email is mandatory")
+	@Email(message="Email should be in correct format")
 	private String email;
-	private long contactNo;
-	private String role;
+	
+	
+	@NotEmpty(message="username is mandatory")
+	private String name;
+	
+	@NotEmpty(message="password is mandatory")
 	private String password;
-	private String Confirmpassword ;
+	
+	@NotEmpty(message="confirm password is mandatory")
+	private String password2;
+	
+	@Pattern(regexp="(^$|[0-9]{10})")
+	@Size(min=10,max=10,message="Phone number must be 10 digit")
+	private String phone;
+	private String role;
 	private boolean enabled;
 	
+	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="user")
+	private Set<Address> addresses=new HashSet<Address>();
 	
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="user",cascade=CascadeType.ALL)
-	private Set<Address> addresses = new HashSet<Address>();
-	
-	public int getUserID() {
-		return userID;
-	}
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
-	public String getFirstname() {
-		return firstname;
-	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getContactNo() {
-		return contactNo;
+	public String getName() {
+		return name;
 	}
-	public void setContactNo(long string) {
-		this.contactNo = string;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getPassword() {
 		return password;
@@ -75,11 +63,23 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getConfirmpassword() {
-		return Confirmpassword;
+	public String getPassword2() {
+		return password2;
 	}
-	public void setConfirmpassword(String confirmpassword) {
-		Confirmpassword = confirmpassword;
+	public void setPassword2(String password2) {
+		this.password2 = password2;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public boolean isEnabled() {
 		return enabled;
@@ -95,5 +95,4 @@ public class User {
 	}
 	
 	
-
 }

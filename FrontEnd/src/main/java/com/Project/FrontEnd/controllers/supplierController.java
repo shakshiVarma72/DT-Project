@@ -1,16 +1,22 @@
 package com.Project.FrontEnd.controllers;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.method.support.ModelAndViewContainer;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.onlineshop.BackEnd2.Dao.SupplierDao;
 import com.onlineshop.BackEnd2.dto.Supplier;
+
+
 @Controller
 public class supplierController {
 	
@@ -18,20 +24,18 @@ public class supplierController {
 SupplierDao supplierDao;
 	
   @RequestMapping(value="/admin/getaddsupplier",method=RequestMethod.GET)
-	public String getSupplierForm(ModelMap map){
+	public ModelAndView getSupplierForm(ModelMap map){
 		System.out.println(" I AM ADD supplier");
-		return "AddSupplier";
+		ModelAndView mv=new ModelAndView("AddSupplier");
+		mv.addObject("supplierObj",new Supplier());
+		return mv;
 	}
 	 
   @RequestMapping(value="/admin/submitSupplier",method=RequestMethod.POST)
-    public String SubmitForm(@RequestParam("supplierName")String supplierName,ModelMap map) {
-		Supplier supp1=new Supplier();
-		supp1.setSupplierName(supplierName);
-	
-       System.out.println("category Added Succesfully");	
-         boolean supp2=supplierDao.addSupplier(supp1);
+    public String SubmitForm(@ModelAttribute("supplierObj")Supplier supplierObj,ModelMap map) {
+	     boolean supp2=supplierDao.addSupplier(supplierObj);
          if(supp2==true) {
-	return "success"; }
+	return "redirect:getviewSupplier"; }
     else 
     return "Failure";
   }

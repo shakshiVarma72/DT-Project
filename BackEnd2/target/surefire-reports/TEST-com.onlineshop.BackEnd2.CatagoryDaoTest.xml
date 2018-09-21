@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.onlineshop.BackEnd2.CatagoryDaoTest" time="0.159" errors="0" skipped="3">
+<testsuite tests="3" failures="0" name="com.onlineshop.BackEnd2.CatagoryDaoTest" time="0.132" errors="0" skipped="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\MUKUL\Documents\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1440745685726311232.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\MUKUL\Documents\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5915597435143493455.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jre1.8.0_181\bin;C:\apache-maven-3.5.4\bin;C:\WINDOWS\System32\OpenSSH\;C:\Users\MUKUL\AppData\Local\Microsoft\WindowsApps;C:\Users\MUKUL\AppData\Local\GitHubDesktop\bin;C:\Users\MUKUL\Downloads\eclipse-jee-oxygen-3a-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,13 +61,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="addCategorytest" time="0.053">
+  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="addCategorytest" time="0.044">
     <skipped/>
   </testcase>
-  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="productsList" time="0.053">
+  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="productsList" time="0.044">
     <skipped/>
   </testcase>
-  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="getCategory" time="0.053">
+  <testcase classname="com.onlineshop.BackEnd2.CatagoryDaoTest" name="getCategory" time="0.044">
     <skipped/>
   </testcase>
 </testsuite>
