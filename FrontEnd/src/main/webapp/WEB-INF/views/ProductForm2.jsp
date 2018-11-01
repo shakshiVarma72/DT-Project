@@ -19,7 +19,7 @@
 
 				</c:when>
 				<c:otherwise>
-  		Update Product <i class="fa fa-cubes" aria-hidden="true"></i>
+  		Add Product <i class="fa fa-cubes" aria-hidden="true"></i>
 
 				</c:otherwise>
 			</c:choose>

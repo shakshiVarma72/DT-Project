@@ -1,0 +1,20 @@
+<div class="container" ng-controller="blogController" ng-init="listAllBlogs()">
+  
+  <h1>All Blogs</h1>
+	<table class="table">
+    <thead>
+      <tr>
+        <th>Blog Name</th>
+        <th>Blog Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="blog in allBlogs">
+        <td>{{blog.blogName}}</td>
+        <td>{{blog.blogContent}}</td>
+      </tr>      
+    </tbody>
+  </table>
+	
+	
+</div>

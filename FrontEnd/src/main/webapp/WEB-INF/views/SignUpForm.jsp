@@ -25,7 +25,8 @@
   	<div class="form-group">
     <label for="password">Password:</label>
     <springs:input type="password" class="form-control" path="password"/>
-    <springs:errors path="password"/>
+ 
+     <springs:errors path="password"/>
   	 
   	</div>
   	

@@ -68,7 +68,7 @@
 					<p>Price:${pObj.price}</p>
 					<p>Quantity:${pObj.quantity}</p>
 					<tr>
-						<td><a href="deleteProduct/${pObj.productId}">
+						<td><a href="${contextRoot}deleteProduct/${pObj.productId}">
 								<span class="glyphicon glyphicon-trash"></span>
 						</a></td>
 						<a href="${contextRoot}/addToCart/${pObj.productId}"

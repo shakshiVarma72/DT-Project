@@ -22,7 +22,19 @@
 			<a href="#">Blog</a>
 		</div>
 	</div>
-
+<div class="col-lg-4">
+<div class="text-center py-4">
+<h5><b>Keep In Touch</b> </h5>
+	<i class="fa fa-facebook-square" style="font-size:30px;color:black" aria-hidden="true"></i>
+	<i class="fa fa-youtube" style="font-size:30px;color:black" ></i>
+	<i class="fa fa-twitter" style="font-size:30px;color:black"></i>
+    <i class="fa fa-google" style="font-size:30px;color:black"></i>
+<i class="fa fa-instagram" style="font-size:30px;color:black"></i>
+	</div>
+	
+	<i class="fa fa-truck" style="font-size:40px;  aria-hidden="true">
+	<h5><b> Get free delivery</b> from every order above Rs 1199. </h5></i>
+	</div>
 	<div class="col-lg-12" style="font-family: Archivo";>
 		<div class="row">
 			<div class="col-lg-12">
@@ -34,7 +46,7 @@
 				<a href="#">Lifestyle||</a> <a href="#">BibA||</a> <a href="#">Rado||</a>
 				<a href="#">Gap||</a> <a href="#">Reebok||</a> <a href="#">Puma||</a>
 				<a href="#">Zara||</a> <a href="#">Levis||</a> <a href="#">MotherCare||</a>
-
+<a href="#">Shoes||</a><a href="#">Watches||</a><a href="#">Kids Wear||</a><a href="#">Denims||</a>
 
 
 			</div>

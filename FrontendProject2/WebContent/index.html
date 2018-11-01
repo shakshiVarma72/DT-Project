@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <title>Collaboration Project</title>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.js"></script> 
+
+	
+	<script src="JS/MyController.js"></script>
+	<script src="user/Usercontroller.js"></script>
+	<script src="blog/BlogController.js"></script>
+<!-- Google Fonts -->	
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    
+  	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
+   
+  	
+  
+</head>
+<body>
+
+<div  class="container">
+
+<img src="images/navimage.jpg" width="80px" height="60px"/>
+<img src="images/freelance.png " width="150px" height="80px"/>
+</div>
+<nav  style="background-color: /* #d5f5e3 */  #dde693  ; class="navbar navbar-inverse">
+  <div  class="container-fluid ">
+    <div class="navbar-header">
+     <img src="images//blog.png" width="40px" height="50px" /><a href="#"> </a>
+    </div>
+    <ul  class="nav navbar-nav">
+    
+      <li class="active"><a href="#/!">Home</a></li>
+      <li><a href="#!AddBlog">Blog</a></li>
+      <li><a href="#!AddForum">Forum</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#!Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+<div ng-view="">
+</div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  
+  <footer>
+		<div class="container-fluid" style="background-color:#34495E;height:40px;color:white;text-align:center;padding:10" >
+			&copy; 2018 Copyright:freelance.com	 
+		<!-- <h5><b>Keep In Touch</b> </h5>
+	<i class="fa fa-facebook-square" style="font-size:30px;color:black" aria-hidden="true"></i>
+
+	<i class="fa fa-twitter" style="font-size:30px;color:black"></i>
+    <i class="fa fa-google" style="font-size:30px;color:black"></i>
+<i class="fa fa-instagram" style="font-size:30px;color:black"></i> -->
+	</div>
+	
+	</footer>
+
+</body></html>
+
+
