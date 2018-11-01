@@ -34,8 +34,5 @@ myApp.controller("blogController",function($scope,$http, $window,$location,$root
 			$scope.allBlogs=[];
 			$scope.viewMessage="No Blogs Found...!!!";
 		});
-	};
-	
-	
-	
+	};	
 });

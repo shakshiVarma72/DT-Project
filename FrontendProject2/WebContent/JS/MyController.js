@@ -23,10 +23,16 @@ myApp.config(function($routeProvider) {
         templateUrl : "blog/AddBlog.html"
     })
     .when("/AddForum", {
-        templateUrl : "user/AddForum.html"
+        templateUrl : "forum/AddForum.html"
+    })
+    .when("/AddJob", {
+        templateUrl : "job/AddJob.html"
     })
     .when("/logout", {
         templateUrl : "user/Logout.html"
+    })
+    .when("/viewForumsToUser", {
+        templateUrl : "forum/viewAllForumsByUser.html"
     })
     .when("/viewBlogsToUser", {
         templateUrl : "blog/ViewAllBlogsByUser.html"

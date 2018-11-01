@@ -36,11 +36,12 @@ myApp.controller("userController",function($scope,$http, $window,$location,$root
 				
 				if($rootScope.currentUser.role=='ROLE_USER'){
 					console.log('Role is User')
-				}
+				
+				}$location.path("UserHome")
 				if($rootScope.currentUser.role=='ROLE_ADMIN'){
 					console.log('Role is Admin');
 				}
-				$location.path("UserHome")
+				$location.path("AdminHome")
 				
 		  }, function errorCallback(response) {
 			  	alert('Username or password is incorrect. Try Again');
